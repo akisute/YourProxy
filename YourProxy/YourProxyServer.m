@@ -31,14 +31,11 @@
 
 - (void)socket:(GCDAsyncSocket *)sock didAcceptNewSocket:(GCDAsyncSocket *)newSocket
 {
-    // Doesn't work at this point since the socket is just begin accepting, not connected.
-    // In fact, the socket must be connected before marking it as background-capable socket.
-    // This is not good for proxy server... :(
-    [sock performBlock:^{
-        BOOL result = [sock enableBackgroundingOnSocket];
-        NSLog(@"enableBackgroundingOnSocket = %d", result);
-    }];
     [super socket:sock didAcceptNewSocket:newSocket];
+    [newSocket performBlock:^{
+        BOOL result = [newSocket enableBackgroundingOnSocket];
+        NSLog(@"[INFO] enableBackgroundingOnSocket = %d", result);
+    }];
 }
 
 @end

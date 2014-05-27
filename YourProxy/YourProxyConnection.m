@@ -15,7 +15,9 @@
 
 - (NSObject<HTTPResponse> *)httpResponseForMethod:(NSString *)method URI:(NSString *)path
 {
-	return [[HTTPDataResponse alloc] initWithData:[@"Hello, World!" dataUsingEncoding:NSUTF8StringEncoding]];
+    NSDate *date = [NSDate date];
+    NSString *message = [NSString stringWithFormat:@"Hello! Current time is %@", date];
+	return [[HTTPDataResponse alloc] initWithData:[message dataUsingEncoding:NSUTF8StringEncoding]];
 }
 
 @end
