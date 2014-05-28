@@ -13,6 +13,9 @@
 
 + (instancetype)sharedManager;
 
-@property (nonatomic, readonly) YourProxyServer *proxyServer;
+@property (nonatomic, readonly) BOOL isProxyServerRunnning;
+- (void)startProxyServer;
+- (void)stopProxyServer;
+
 
 @end

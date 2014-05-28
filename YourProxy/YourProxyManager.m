@@ -34,4 +34,19 @@
     return self;
 }
 
+- (BOOL)isProxyServerRunnning
+{
+    return self.proxyServer.isRunning;
+}
+
+- (void)startProxyServer
+{
+    [self.proxyServer start:NULL];
+}
+
+- (void)stopProxyServer
+{
+    [self.proxyServer stop];
+}
+
 @end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		26A62536F49B43BC92313710 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B72426D40D23498C809058DC /* libPods.a */; };
+		C521A5561935A20600C45829 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C521A5551935A20600C45829 /* DashboardViewController.m */; };
 		C57F53CA19344D8600949AEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57F53C919344D8600949AEB /* Main.storyboard */; };
 		C57F53CD1934603C00949AEB /* YourProxyServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C57F53CC1934603C00949AEB /* YourProxyServer.m */; };
 		C57F53D01934609E00949AEB /* YourProxyConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C57F53CF1934609E00949AEB /* YourProxyConnection.m */; };
@@ -39,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		B72426D40D23498C809058DC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C521A5541935A20600C45829 /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
+		C521A5551935A20600C45829 /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
 		C57F53C919344D8600949AEB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C57F53CB1934603C00949AEB /* YourProxyServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YourProxyServer.h; sourceTree = "<group>"; };
 		C57F53CC1934603C00949AEB /* YourProxyServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YourProxyServer.m; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 				C57F53CE1934609E00949AEB /* YourProxyConnection.h */,
 				C57F53CF1934609E00949AEB /* YourProxyConnection.m */,
 				C57F53C919344D8600949AEB /* Main.storyboard */,
+				C521A5541935A20600C45829 /* DashboardViewController.h */,
+				C521A5551935A20600C45829 /* DashboardViewController.m */,
 				C57F53D4193464FD00949AEB /* BrowserViewController.h */,
 				C57F53D5193464FD00949AEB /* BrowserViewController.m */,
 				C5B69FC91933050700E71BC4 /* Images.xcassets */,
@@ -314,6 +319,7 @@
 				C57F53D31934615300949AEB /* YourProxyManager.m in Sources */,
 				C5B69FC81933050700E71BC4 /* AppDelegate.m in Sources */,
 				C57F53D01934609E00949AEB /* YourProxyConnection.m in Sources */,
+				C521A5561935A20600C45829 /* DashboardViewController.m in Sources */,
 				C57F53CD1934603C00949AEB /* YourProxyServer.m in Sources */,
 				C5B69FC41933050700E71BC4 /* main.m in Sources */,
 				C57F53D6193464FD00949AEB /* BrowserViewController.m in Sources */,

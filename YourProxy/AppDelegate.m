@@ -19,7 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[YourProxyManager sharedManager].proxyServer start:NULL];
+    [[YourProxyManager sharedManager] startProxyServer];
     return YES;
 }
 
@@ -44,15 +44,21 @@
 {
     [application clearKeepAliveTimeout];
     [self endBackgroundProcessKeepAlive];
-    [[YourProxyManager sharedManager].proxyServer stop];
+    [[YourProxyManager sharedManager] stopProxyServer];
 }
 
 #pragma mark - Background Processing
 
 - (void)beginBackgroundProcessKeepAlive
 {
-    NSLog(@"[INFO] Trying to get an access to background processing. Remaining background timer = %f", [[UIApplication sharedApplication] backgroundTimeRemaining]);
     [self endBackgroundProcessKeepAlive];
+    
+    if (![[YourProxyManager sharedManager] isProxyServerRunnning]) {
+        NSLog(@"[INFO] Server is not runninng anymore. Background processing will be suspended.");
+        return;
+    }
+    
+    NSLog(@"[INFO] Trying to get an access to background processing. Remaining background timer = %f", [[UIApplication sharedApplication] backgroundTimeRemaining]);
     self.backgroundTaskIdentifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
         [self beginBackgroundProcessKeepAlive];
     }];
